@@ -1,4 +1,12 @@
 <%= form_with url: '/static_pages', method: 'GET' do |form| %>
   <%= form.label :user %>
   <%= form.text_field :user %>
+
+  <%= form.submit %>
+<% end %>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <%= image_tag Flickr.url(photo) %><br />
+  <% end %>
 <% end %>
