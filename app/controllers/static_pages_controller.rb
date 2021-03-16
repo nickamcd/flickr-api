@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   require 'flickr'
 
   def index
-    # flickr = Flickr.new ENV['flicker_api_key'], ENV['flicker_api_secret']
+   flickr = Flickr.new ENV['flickr_api_key'], ENV['flickr_api_secret']
 
    
 
